@@ -336,6 +336,10 @@ module Precious
       mustache :file_view, { :layout => false }
     end
 
+    get '/robots.txt' do
+      "User-agent: *\nDisallow: /" 
+    end
+
     get '/*' do
       show_page_or_file(params[:splat].first)
     end
