@@ -337,7 +337,7 @@ module Precious
     end
 
     get '/robots.txt' do
-      "User-agent: *\nDisallow: /" 
+      send_file 'robots.txt' 
     end
 
     get '/*' do
